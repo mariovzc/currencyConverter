@@ -1,23 +1,24 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { 
+  AppRegistry,
+  ImageBackground,
+  Text
+ } from 'react-native'
+import images from './assets/images/images'
+import mainViewStyle from './assets/styles/mainViewStyle';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
-    );
+      <ImageBackground 
+        source={images.mainBg}
+        style={mainViewStyle.backGroundImage}
+      >
+      <Text
+        >
+          {32 + 8}
+        </Text>
+      </ImageBackground>
+    )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
