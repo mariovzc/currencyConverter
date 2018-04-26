@@ -11,8 +11,8 @@ export default class Button extends React.PureComponent {
     const { onPress, title } = this.props;
     return (
       <TouchableHighlight onPress={onPress}>
-        <View style={styles.button}>
-            <Text style={styles.buttonText}>
+        <View style={style.button}>
+            <Text style={style.buttonText}>
               {title}
             </Text>
         </View>

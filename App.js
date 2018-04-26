@@ -1,42 +1,14 @@
-import React from 'react'
-import { 
-  AppRegistry,
-  ImageBackground,
-  Text,
-  Image,
-  View
- } from 'react-native'
-import images from './assets/images/images'
-import mainViewStyle from './assets/styles/mainViewStyle';
-import Button from './components/CustomButton';
+import React, { Component } from 'react';
 
-export default class App extends React.Component {
+import {
+  StackNavigator,
+} from 'react-navigation';
+import MainView from './views/MainView';
+import ConverterView from './views/ConverterView';
 
-  goTo() {
+const App = StackNavigator({
+  Main: { screen: MainView },
+  Converter: { screen: ConverterView }
+});
 
-  }
-  render() {
-    return (
-      <ImageBackground 
-        source={images.mainBg}
-        style={mainViewStyle.backGroundImage}
-      >
-        <Image
-        source={images.icon}
-        />
-        <Text style= {mainViewStyle.primaryText}>
-          Kurrency
-        </Text>
-        <Text style={mainViewStyle.secondaryText}>
-          Easy Exchange
-        </Text>
-        <View style={mainViewStyle.buttonContainer}>
-          <Button
-            title="Get Start"
-            onPress={this.goTo()}
-          />
-        </View>
-      </ImageBackground>
-    )
-  }
-}
+export default App;
