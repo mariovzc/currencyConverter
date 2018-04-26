@@ -14,10 +14,8 @@ export default class MainView extends React.Component {
   static navigationOptions = {
     header: null
   }
-  goTo() {
-
-  }
-  render() {
+  render () {
+    const { navigate } = this.props.navigation
     return (
       <ImageBackground 
         source={images.mainBg}
@@ -35,7 +33,7 @@ export default class MainView extends React.Component {
         <View style={mainViewStyle.buttonContainer}>
           <Button
             title="Get Start"
-            onPress={this.goTo()}
+            onPress={() => navigate('Converter')}
           />
         </View>
       </ImageBackground>
